@@ -109,22 +109,18 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Update all phone and WhatsApp links with constants
+// Disable WhatsApp buttons (no action)
 document.addEventListener('DOMContentLoaded', () => {
-    // Update tel: links
-    const telLinks = document.querySelectorAll('a[href^="tel:"]');
-    telLinks.forEach(link => {
-        link.href = `tel:${PHONE.replace(/\s/g, '')}`;
-        if (link.textContent.trim() === 'Κλήση' || link.textContent.includes('69XXXXXXXX')) {
-            link.textContent = PHONE;
+    // Prevent WhatsApp buttons from doing anything
+    const whatsappButtons = document.querySelectorAll('.btn-whatsapp, .whatsapp-float, .sticky-whatsapp, a[href="#"]');
+    whatsappButtons.forEach(btn => {
+        if (btn.classList.contains('btn-whatsapp') || btn.classList.contains('whatsapp-float') || btn.classList.contains('sticky-whatsapp')) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
         }
-    });
-
-    // Update WhatsApp links
-    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
-    const whatsappNumber = WHATSAPP.replace(/\s/g, '').replace('+', '');
-    whatsappLinks.forEach(link => {
-        link.href = `https://wa.me/${whatsappNumber}`;
     });
 });
 
