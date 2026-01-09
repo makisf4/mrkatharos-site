@@ -109,20 +109,8 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Disable WhatsApp buttons (no action)
-document.addEventListener('DOMContentLoaded', () => {
-    // Prevent WhatsApp buttons from doing anything
-    const whatsappButtons = document.querySelectorAll('.btn-whatsapp, .whatsapp-float, .sticky-whatsapp, a[href="#"]');
-    whatsappButtons.forEach(btn => {
-        if (btn.classList.contains('btn-whatsapp') || btn.classList.contains('whatsapp-float') || btn.classList.contains('sticky-whatsapp')) {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
-        }
-    });
-});
+// WhatsApp buttons are now active - removed disable code
+// WhatsApp links point to: https://wa.me/306931278356
 
 // Lazy loading images (optional enhancement)
 if ('IntersectionObserver' in window) {
