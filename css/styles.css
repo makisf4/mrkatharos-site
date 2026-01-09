@@ -469,26 +469,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .benefits-list {
     list-style: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
     padding: 0;
     margin: 1.5rem 0;
 }
 
 .benefits-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
+    list-style: none !important;
+    position: relative;
+    padding-left: 1.6rem;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
-    list-style: none !important;
 }
 
 .benefits-list li::before {
     content: "🌿";
-    font-size: 1.1rem;
-    line-height: 1.4;
-    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 /* FAQ Section */
@@ -737,16 +740,23 @@ h1, h2, h3, h4, h5, h6 {
 
     .benefits-list {
         list-style: none !important;
-        padding: 0;
-        margin: 1.5rem 0;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
     }
 
     .benefits-list li {
         list-style: none !important;
+        position: relative;
+        padding-left: 1.6rem;
     }
 
     .benefits-list li::before {
         content: "🌿";
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+        font-size: 1rem;
+        line-height: 1;
     }
 }
 
@@ -762,16 +772,23 @@ h1, h2, h3, h4, h5, h6 {
 
     .benefits-list {
         list-style: none !important;
-        padding: 0;
-        margin: 1.5rem 0;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
     }
 
     .benefits-list li {
         list-style: none !important;
+        position: relative;
+        padding-left: 1.6rem;
     }
 
     .benefits-list li::before {
         content: "🌿";
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+        font-size: 1rem;
+        line-height: 1;
     }
 }
 
